@@ -1,0 +1,11 @@
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\bin\Debug\SmartApkManager.exe.config
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\obj\Debug\SmartApkManager.csprojResolveAssemblyReference.cache
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\obj\Debug\SmartApkManager.ApkHolder.resources
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\obj\Debug\SmartApkManager.Form1.resources
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\obj\Debug\SmartApkManager.Properties.Resources.resources
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\obj\Debug\SmartApkManager.csproj.GenerateResource.Cache
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\bin\Debug\SmartApkManager.exe
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\bin\Debug\SmartApkManager.pdb
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\bin\Debug\Ionic.Zip.dll
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\obj\Debug\SmartApkManager.exe
+C:\Users\smart8\Desktop\SmartApkManager\SmartApkManager\obj\Debug\SmartApkManager.pdb
