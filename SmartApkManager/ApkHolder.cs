@@ -25,7 +25,7 @@ namespace SmartApkManager
                 if (value != null)
                 {
                     PicBxIcon.Image = Image.FromStream(new MemoryStream(value.details.HiResIcon));
-                    LblPackageName.Text = string.Format("{0} {1}", value.details.applicationLable, value.details.versionName);
+                    LblPackageName.Text = string.Format("{0} {1}", value.details.applicationLabel, value.details.versionName);
                 }
                 else
                 {

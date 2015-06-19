@@ -305,7 +305,7 @@ namespace SmartApkManager
         public static void install(APK app, bool Reinstall, Device device)
         {
             string appPath = app.details.filePath;
-            Job installJob = new Job(string.Format("Install {0} {1}", app.details.applicationLable, app.details.versionName), device, Jobs.Install);
+            Job installJob = new Job(string.Format("Install {0} {1}", app.details.applicationLabel, app.details.versionName), device, Jobs.Install);
             installJob.parameters.Add(appPath);
             if (Reinstall)
             {
@@ -316,7 +316,7 @@ namespace SmartApkManager
 
         public static void uninstall(APK app, bool keepData, Device device)
         {
-            Job uninstallJob = new Job(string.Format("Uninstall {0} {1}", app.details.applicationLable, app.details.versionName), device, Jobs.Uninstall);
+            Job uninstallJob = new Job(string.Format("Uninstall {0} {1}", app.details.applicationLabel, app.details.versionName), device, Jobs.Uninstall);
             if (keepData)
             {
                 //uninstallJob.AdbCmd = string.Format("shell pm uninstall -k -k \"{0}\"", packageName);

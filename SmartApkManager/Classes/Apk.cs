@@ -20,7 +20,7 @@ namespace SmartApkManager
             public string versionCode;
             public string versionName;
             public ArrayList userPermisions;
-            public string applicationLable;
+            public string applicationLabel;
             public string applicationIconPath;
             public string applicationHiResIconPath;
             public byte[] icon;
@@ -129,7 +129,7 @@ namespace SmartApkManager
 
             if (aaptOutputLine.IndexOf("application:") >= 0)
             {
-                this.details.applicationLable = getValue(aaptOutputLine, "label");
+                this.details.applicationLabel = getValue(aaptOutputLine, "label");
                 this.details.applicationIconPath = getValue(aaptOutputLine, "icon");
             }
             if(aaptOutputLine.IndexOf("application-icon-120") >= 0||
