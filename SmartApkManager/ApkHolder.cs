@@ -24,13 +24,26 @@ namespace SmartApkManager
             {
                 if (value != null)
                 {
-                    PicBxIcon.Image = Image.FromStream(new MemoryStream(value.details.HiResIcon));
-                    LblPackageName.Text = string.Format("{0} {1}", value.details.applicationLabel, value.details.versionName);
+                    try
+                    {
+                        if (value.details.HiResIcon != null)
+                            PicBxIcon.Image = Image.FromStream(new MemoryStream(value.details.HiResIcon));
+                        else if (value.details.icon != null)
+                            PicBxIcon.Image = Image.FromStream(new MemoryStream(value.details.icon));
+                    }
+                    catch
+                    {
+                        //MessageBox.Show(value.details.applicationLabel);
+                    }
+                    LblPackageName.Text = value.details.applicationLabel;
+                    LblVersionName.Text = value.details.versionName;
+                    P_apk = value;
                 }
                 else
                 {
                     PicBxIcon.Image = Properties.Resources.android_Logo;
                     LblPackageName.Text = "";
+                    LblVersionName.Text = "";
                 }
             }
             get

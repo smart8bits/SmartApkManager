@@ -22,3 +22,4 @@ C:\Users\smart8\Documents\GitHub\SmartApkManager\SmartApkManager\obj\Debug\Smart
 C:\Users\smart8\Documents\GitHub\SmartApkManager\SmartApkManager\bin\Debug\Database1.mdf
 C:\Users\smart8\Documents\GitHub\SmartApkManager\SmartApkManager\bin\Debug\Database1_log.ldf
 C:\Users\smart8\Documents\GitHub\SmartApkManager\SmartApkManager\obj\Debug\SmartApkManager.FrmMain.resources
+C:\Users\smart8\Documents\GitHub\SmartApkManager\SmartApkManager\obj\Debug\SmartApkManager.FrmOptions.resources
