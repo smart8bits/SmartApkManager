@@ -17,6 +17,7 @@ namespace SmartApkManager
         {
             InitializeComponent();
         }
+        public bool selected = false;
         private APK P_apk;
         public APK APK
         {
@@ -61,7 +62,39 @@ namespace SmartApkManager
 
         private void PicBxIcon_Click(object sender, EventArgs e)
         {
-            
+            ApkHolder_Click(this, null);
+        }
+
+        private void LblPackageName_Click(object sender, EventArgs e)
+        {
+            ApkHolder_Click(this, null);
+        }
+
+        private void LblVersionName_Click(object sender, EventArgs e)
+        {
+            ApkHolder_Click(this, null);
+        }
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            ApkHolder_Click(this, null);
+        }
+    
+        private void ApkHolder_Click(object sender, EventArgs e)
+        {
+            if(!selected)
+            {
+                selected = true;
+                this.BackColor = Color.SkyBlue;
+                PicBxIcon.BackColor = Color.SkyBlue;
+                this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            }
+            else
+            {
+                selected = false;
+                this.BackColor = this.Parent.BackColor;
+                PicBxIcon.BackColor = this.Parent.BackColor;
+                this.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            }
         }
     }
 }

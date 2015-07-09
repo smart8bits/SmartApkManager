@@ -38,6 +38,8 @@
             this.TxBxPath = new System.Windows.Forms.TextBox();
             this.BtnBrowseApkDir = new System.Windows.Forms.Button();
             this.ChkBxRecurcive = new System.Windows.Forms.CheckBox();
+            this.createNewBankToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +56,8 @@
             // 
             // fILEToolStripMenuItem
             // 
+            this.fILEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.createNewBankToolStripMenuItem});
             this.fILEToolStripMenuItem.Name = "fILEToolStripMenuItem";
             this.fILEToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.fILEToolStripMenuItem.Text = "&FILE";
@@ -120,11 +124,28 @@
             this.ChkBxRecurcive.Text = "Recurcive";
             this.ChkBxRecurcive.UseVisualStyleBackColor = true;
             // 
+            // createNewBankToolStripMenuItem
+            // 
+            this.createNewBankToolStripMenuItem.Name = "createNewBankToolStripMenuItem";
+            this.createNewBankToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.createNewBankToolStripMenuItem.Text = "&Create new bank";
+            this.createNewBankToolStripMenuItem.Click += new System.EventHandler(this.createNewBankToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(555, 86);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Store";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 464);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnAddToDb);
             this.Controls.Add(this.ChkBxRecurcive);
             this.Controls.Add(this.BtnBrowseApkDir);
@@ -153,6 +174,8 @@
         private System.Windows.Forms.TextBox TxBxPath;
         private System.Windows.Forms.Button BtnBrowseApkDir;
         private System.Windows.Forms.CheckBox ChkBxRecurcive;
+        private System.Windows.Forms.ToolStripMenuItem createNewBankToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
 
     }
 }

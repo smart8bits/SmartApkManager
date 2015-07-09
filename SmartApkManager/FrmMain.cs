@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.IO;
+using System.Threading;
 
 namespace SmartApkManager
 {
@@ -63,15 +64,27 @@ namespace SmartApkManager
                 }
 
                 FlwLyoExplorer.Controls.Clear();
-                foreach (string FileName in FilesInDir)
+                Thread showApks = new Thread(() => ShowApks(FilesInDir));
+                showApks.IsBackground = true;
+                showApks.Start();
+            }
+        }
+        private void ShowApks(string[] apkFilesPath)
+        {
+            foreach (string FileName in apkFilesPath)
+            {
+                try
                 {
-                    try
-                    {
-                        ApkHolder apkHolder = new ApkHolder();
-                        apkHolder.APK = new APK(FileName);
-                        FlwLyoExplorer.Controls.Add(apkHolder);
-                    }
-                    catch { }
+                    ApkHolder apkHolder = new ApkHolder();
+                    apkHolder.APK = new APK(FileName);
+                    this.Invoke((MethodInvoker)delegate()
+                   {
+                       FlwLyoExplorer.Controls.Add(apkHolder);
+                   });
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
         }
@@ -111,5 +124,11 @@ namespace SmartApkManager
             }
             DbConnection.Close();
         }
+
+        private void createNewBankToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
